@@ -1,0 +1,1 @@
+hexo.render.render({path:page.path}).then(function(e){});

@@ -1,0 +1,1 @@
+function dollarsHandle(e){var n=e.split("$$"),t="";return 2<n.length?(n.forEach((e,n)=>{n%2==1?t=(t+="<p>$$")+e+"$$</p>":t+=e}),t):e}hexo.extend.filter.register("before_post_render",e=>{var t,r=e.content.split("```");return r.forEach((e,n)=>{n%2==0&&(r[n]=dollarsHandle(e))}),2<r.length?(t="",r.forEach((e,n)=>{t=t+e+"```"}),e.content=t):e.content=dollarsHandle(e.content),e},5);
