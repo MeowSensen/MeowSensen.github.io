@@ -1,0 +1,1 @@
+"use strict";exports.__esModule=!0,exports.Config=void 0;var YAML=require("yaml"),fs=require("fs"),Config=function(){function o(){try{console.log("*******");fs.readFileSync("_config.yaml","utf8")}catch(o){console.log(o)}}return o.prototype.save=function(){try{fs.writeFileSync("config.yaml",YAML.stringify(this))}catch(o){console.log(o)}},o}();exports.Config=Config;
